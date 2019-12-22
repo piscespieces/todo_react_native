@@ -26,6 +26,11 @@ const GoalInput = props => {
                     value={enteredGoal}
                 />
                 <Button
+                    color="red"
+                    title="Cancel"
+                    onPress={props.onCancel}
+                />
+                <Button
                     title="Submit"
                     onPress={addGoalHandler}
                 />

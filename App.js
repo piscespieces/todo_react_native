@@ -18,6 +18,10 @@ export default function App() {
     })
   }
 
+  const cancelGoalAddHandler = () => {
+    setIsAddMode(false)
+  }
+
   return (
     <View style={styles.container}>
       <Button
@@ -27,6 +31,7 @@ export default function App() {
       <GoalInput
         onAddGoal={addGoalHandler}
         visible={isAddMode}
+        onCancel={cancelGoalAddHandler}
       />
       <FlatList
         keyExtractor={(item, index) => item.id}
