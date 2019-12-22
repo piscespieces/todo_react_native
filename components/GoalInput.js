@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, TextInput, Button, Modal } from 'react-native'
+import { StyleSheet, View, TextInput, Button, Modal, Slider } from 'react-native'
 
 const GoalInput = props => {
     const [enteredGoal, setEnteredGoal] = useState('')
@@ -9,7 +9,10 @@ const GoalInput = props => {
     }
 
     return (
-        <Modal visible={props.visible}>
+        <Modal
+            visible={props.visible}
+            animationType="slide"
+        >
             <View style={styles.inputContainer}>
                 <TextInput
                     style={styles.textInput}
@@ -30,8 +33,8 @@ export default GoalInput
 
 const styles = StyleSheet.create({
     inputContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+        flex: 1,
+        justifyContent: 'center',
         alignItems: 'center',
     },
 
