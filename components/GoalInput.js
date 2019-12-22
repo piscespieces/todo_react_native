@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, View, TextInput, Button } from 'react-native'
 
 export default GoalInput = props => {
