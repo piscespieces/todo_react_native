@@ -4,11 +4,10 @@ import GoalItem from './components/GoalItem'
 import GoalInput from './components/GoalInput'
 
 export default function App() {
-  const [enteredGoal, setEnteredGoal] = useState('')
   const [courseGoals, setCourseGoals] = useState([])
 
-  const addGoalHandler = () => {
-    setCourseGoals((currentStateGoal => [...currentStateGoal, { id: Math.random().toString(), value: enteredGoal }]))
+  const addGoalHandler = goal => {
+    setCourseGoals((currentStateGoal => [...currentStateGoal, { id: Math.random().toString(), value: goal }]))
   }
 
   return (
