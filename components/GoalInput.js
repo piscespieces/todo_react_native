@@ -8,6 +8,11 @@ const GoalInput = props => {
         setEnteredGoal(enteredText)
     }
 
+    const addGoalHandler = () => {
+        props.onAddGoal(enteredGoal)
+        setEnteredGoal('')
+    }
+
     return (
         <Modal
             visible={props.visible}
@@ -22,7 +27,7 @@ const GoalInput = props => {
                 />
                 <Button
                     title="Submit"
-                    onPress={props.onAddGoal.bind(this, enteredGoal)}
+                    onPress={addGoalHandler}
                 />
             </View>
         </Modal>
