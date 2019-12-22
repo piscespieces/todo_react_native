@@ -20,6 +20,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Button
+        title="Add New Goal"
         onPress={() => setIsAddMode(true)}
       />
       <GoalInput

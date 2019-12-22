@@ -9,7 +9,7 @@ const GoalInput = props => {
     }
 
     return (
-        <Modal>
+        <Modal visible={props.visible}>
             <View style={styles.inputContainer}>
                 <TextInput
                     style={styles.textInput}
