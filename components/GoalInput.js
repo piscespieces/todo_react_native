@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, TextInput, Button } from 'react-native'
+import { StyleSheet, View, TextInput, Button, Modal } from 'react-native'
 
 const GoalInput = props => {
     const [enteredGoal, setEnteredGoal] = useState('')
@@ -9,18 +9,20 @@ const GoalInput = props => {
     }
 
     return (
-        <View style={styles.inputContainer}>
-            <TextInput
-                style={styles.textInput}
-                placeholder="Course Goals"
-                onChangeText={goalInputHandler}
-                value={enteredGoal}
-            />
-            <Button
-                title="Submit"
-                onPress={props.onAddGoal.bind(this, enteredGoal)}
-            />
-        </View>
+        <Modal>
+            <View style={styles.inputContainer}>
+                <TextInput
+                    style={styles.textInput}
+                    placeholder="Course Goals"
+                    onChangeText={goalInputHandler}
+                    value={enteredGoal}
+                />
+                <Button
+                    title="Submit"
+                    onPress={props.onAddGoal.bind(this, enteredGoal)}
+                />
+            </View>
+        </Modal>
     )
 }
 
