@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, TextInput, Button, Modal, Slider } from 'react-native'
+import { StyleSheet, View, TextInput, Button, Modal } from 'react-native'
 
 const GoalInput = props => {
     const [enteredGoal, setEnteredGoal] = useState('')
@@ -21,7 +21,7 @@ const GoalInput = props => {
             <View style={styles.inputContainer}>
                 <TextInput
                     style={styles.textInput}
-                    placeholder="Course Goals"
+                    placeholder="Task To-Do"
                     onChangeText={goalInputHandler}
                     value={enteredGoal}
                 />

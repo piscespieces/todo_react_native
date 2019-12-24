@@ -25,7 +25,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Button
-        title="Add New Goal"
+        title="Add new to-do"
         onPress={() => setIsAddMode(true)}
       />
       <GoalInput
